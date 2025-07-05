@@ -19,13 +19,14 @@ def home(request):
                return redirect('hello',result=result)
          #return HttpResponse(request,'index1.html',{'result':10})
       except(ValueError,TypeError):
-         result="Invalid"
+          
+          result="Invalid"
 
 
       
       
        
-    return render(request,'home.html',{'result':result})
+      return render(request,'home.html',{'result':result})
 
 def hello(request,result):
-      return render(request,'result.html', {'result':result})
+      return render(request,'result.html',{'result':result})
